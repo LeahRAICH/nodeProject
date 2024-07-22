@@ -6,7 +6,7 @@ const authenticateToken = (req, res, next) => {
   try {
     const token = req.header('auth-token');
     if (!token) {
-      return res.status(401).send("Authorization failed. No access token.");
+      return res.status(401).send("Authorization failed . No access token.");
     }
     jwt.verify(token, process.env.SECRET_KEY, (err, user) => {
       if (err) {
